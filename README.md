@@ -1,11 +1,7 @@
-# fresh project
+# billson.me 
 
-### Usage
+My personal site, visit it at http://billson.me.
 
-Start the project:
+## Technical Overview
 
-```
-deno task start
-```
-
-This will watch the project directory and restart as necessary.
+Used this opportunity to try out [Fresh](https://fresh.deno.dev/). 
