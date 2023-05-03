@@ -1,6 +1,6 @@
 import { asset, Head } from "$fresh/runtime.ts";
 import { AppProps } from "$fresh/src/server/types.ts";
-import NavBar from "../components/NavBar.tsx";
+import NavBar from "../islands/NavBar.tsx";
 
 export default function App({ Component }: AppProps) {
   return (
