@@ -1,0 +1,6 @@
+@import url('https://unpkg.com/chota@latest');
+
+.container main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
