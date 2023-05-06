@@ -32,5 +32,11 @@ interface BlogTitleProps {
 }
 
 function BlogTitle({ post }: BlogTitleProps) {
-  return <h2>{post.title}</h2>;
+  return (
+    <a href={`/blog/posts/${post.id}#${encodeURIComponent(post.title)}`}>
+      <h2>
+        {post.title}
+      </h2>
+    </a>
+  );
 }

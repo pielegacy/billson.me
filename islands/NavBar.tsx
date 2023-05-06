@@ -12,7 +12,7 @@ function NavBarItem({ text, link }: NavBarItemProps) {
 const links: NavBarItemProps[] = [
   {
     link: "/",
-    text: "Home",
+    text: "Welcome",
   },
   {
     link: "/blog",
