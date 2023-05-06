@@ -29,3 +29,20 @@ export interface BlogPostPageResult {
         }
     }
 }
+
+export interface BlogPostBlockResult {
+    object: "block";
+    paragraph: {
+        rich_text: [
+            {
+                type: "text";
+                text: {
+                    content: string;
+                    link: null | {
+                        url: string;
+                    }
+                }
+            }
+        ]
+    }
+}
