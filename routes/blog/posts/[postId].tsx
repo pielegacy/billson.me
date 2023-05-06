@@ -8,15 +8,15 @@ export const handler: Handlers<BlogPostRouteProps> = {
     const postId = getPostId(ctx.params);
     const post = await getPost(postId);
     const blocks = await getPostBlocks(postId);
-    console.log(blocks);
 
     return await ctx.render({
+      // Todo: create builder
       post: {
         id: postId,
         title: post.properties.Name.title[0].text.content,
-        contents: [
-          blocks[0].paragraph.rich_text[0].text.content,
-        ],
+        contents: blocks.map((block) =>
+          block.paragraph.rich_text.map((chunk) => chunk.text.content).join("")
+        ),
       },
     });
   },
