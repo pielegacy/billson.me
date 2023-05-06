@@ -1,3 +1,5 @@
+import { isListQueryResult, BlogPostPageResult } from "./types.ts";
+
 const ENV_KEY_NOTION_SECRET = "NOTION_SECRET";
 const ENV_KEY_NOTION_DATABASE_ID = "NOTION_DATABASE_ID";
 
@@ -5,8 +7,10 @@ function getRequestUrl() {
   if (!Deno.env.has(ENV_KEY_NOTION_DATABASE_ID)) {
     throw new Error("No Notion secret defined");
   }
-  
-  return `https://api.notion.com/v1/databases/${Deno.env.get(ENV_KEY_NOTION_DATABASE_ID)}`;
+
+  return `https://api.notion.com/v1/databases/${
+    Deno.env.get(ENV_KEY_NOTION_DATABASE_ID)
+  }`;
 }
 
 function getRequestHeaders() {
@@ -34,5 +38,10 @@ export async function getPosts() {
       }),
     },
   );
-  return await response.json();
+  const responseJson = await response.json();
+  if (!isListQueryResult<BlogPostPageResult>(responseJson)) {
+    throw new Error("Invalid query");
+  }
+
+  return responseJson.results;
 }
