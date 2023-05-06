@@ -14,6 +14,7 @@ export function isListQueryResult<TResult>(result: QueryResult): result is ListQ
 
 export interface BlogPostPageResult {
     object: "page";
+    id: string;
     properties: {
         Name: {
             type: "title";
