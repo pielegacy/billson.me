@@ -1,6 +1,8 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 import TemplatedTitle from "../../../components/TemplatedTitle.tsx";
+import BlogPostRenderer from "../../../components/blog/BlogPostRenderer.tsx";
 import { BlogPost } from "../../../types/blog.ts";
+import { mapBlogContents } from "../../../utils/blog.ts";
 import { getPost, getPostBlocks } from "../../../utils/notion.ts";
 
 export const handler: Handlers<BlogPostRouteProps> = {
@@ -14,9 +16,7 @@ export const handler: Handlers<BlogPostRouteProps> = {
       post: {
         id: postId,
         title: post.properties.Name.title[0].text.content,
-        contents: blocks.map((block) =>
-          block.paragraph.rich_text.map((chunk) => chunk.text.content).join("")
-        ),
+        paragraphs: mapBlogContents(blocks),
       },
     });
   },
@@ -32,8 +32,7 @@ export default function BlogPostRoute(
   return (
     <section>
       <TemplatedTitle title={data.post.title} />
-      <h1>{data.post.title}</h1>
-      {data.post.contents.map((block) => <p>{block}</p>)}
+      <BlogPostRenderer post={data.post} />
     </section>
   );
 }
