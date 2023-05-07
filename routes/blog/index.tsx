@@ -1,7 +1,7 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
 import TemplatedTitle from "../../components/TemplatedTitle.tsx";
-import { BlogPostSummary } from "../../modules/blog/types.ts";
-import { getPosts } from "../../modules/notion/utils.ts";
+import { BlogPostSummary } from "../../types/blog.ts";
+import { getPosts } from "../../utils/notion.ts";
 
 interface BlogProps {
   posts: BlogPostSummary[];

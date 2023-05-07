@@ -1,4 +1,4 @@
-import { BlogPostBlockResult, BlogPostPageResult, isListQueryResult } from "./types.ts";
+import { BlogPostBlockResult, BlogPostPageResult, isListQueryResult } from "../types/notion.ts";
 
 const ENV_KEY_NOTION_SECRET = "NOTION_SECRET";
 const ENV_KEY_NOTION_DATABASE_ID = "NOTION_DATABASE_ID";

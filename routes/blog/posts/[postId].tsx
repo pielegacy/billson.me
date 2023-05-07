@@ -1,7 +1,7 @@
-import { Handlers, PageProps } from "https://deno.land/x/fresh@1.1.5/server.ts";
+import { Handlers, PageProps } from "$fresh/server.ts";
 import TemplatedTitle from "../../../components/TemplatedTitle.tsx";
-import { getPost, getPostBlocks } from "../../../modules/notion/utils.ts";
-import { BlogPost } from "../../../modules/blog/types.ts";
+import { BlogPost } from "../../../types/blog.ts";
+import { getPost, getPostBlocks } from "../../../utils/notion.ts";
 
 export const handler: Handlers<BlogPostRouteProps> = {
   async GET(req, ctx) {
