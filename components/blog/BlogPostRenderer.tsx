@@ -7,7 +7,6 @@ interface BlogPostRendererProps {
 export default function BlogPostRenderer(
   { post }: BlogPostRendererProps,
 ) {
-  console.log(post);
   return (
     <section>
       <h1>{post.title}</h1>
