@@ -18,13 +18,15 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
+        working-directory: site
         run: npm ci
 
       - name: Build site
+        working-directory: site
         run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: astro-build
-          path: dist/
+          path: site/dist/
