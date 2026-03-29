@@ -1,20 +1,74 @@
 ---
 import "../styles/global.css";
+import SEO from "../components/SEO.astro";
+import { siteConfig } from "../site.config.ts";
+
 interface Props {
+	/** Page title */
 	title?: string;
+	/** Page description (defaults to site description) */
+	description?: string;
+	/** Open Graph image URL */
+	ogImage?: string;
+	/** Canonical URL (defaults to current page) */
+	canonicalUrl?: string;
+	/** Whether to disable search engine indexing */
+	noindex?: boolean;
+	/** Whether to disable following links */
+	nofollow?: boolean;
 }
 
-const { title = "Alex Billson" } = Astro.props;
-const currentYear = new Date().getFullYear();
+const {
+	title = siteConfig.title,
+	description = siteConfig.description,
+	ogImage = siteConfig.ogImage,
+	canonicalUrl,
+	noindex,
+	nofollow,
+} = Astro.props;
+
+// Generate JSON-LD structured data for Person schema
+const personSchema = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	"name": siteConfig.author.name,
+	"jobTitle": siteConfig.jobTitle,
+	"description": siteConfig.description,
+	"url": siteConfig.url,
+	"email": siteConfig.author.email,
+	"address": {
+		"@type": "PostalAddress",
+		"addressLocality": siteConfig.location.city,
+		"addressCountry": siteConfig.location.country,
+	},
+	"knowsAbout": siteConfig.expertise,
+	sameAs: [siteConfig.social.linkedin, siteConfig.social.github].filter(
+		Boolean,
+	),
+};
 ---
 
-<html lang="en">
+<html lang={siteConfig.lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		
+		<!-- SEO Component -->
+		<SEO
+			title={title}
+			description={description}
+			ogImage={ogImage}
+			canonicalUrl={canonicalUrl}
+			noindex={noindex}
+			nofollow={nofollow}
+		/>
+		
+		<!-- JSON-LD Structured Data for SEO and AI Agents -->
+		<script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+		
+		<title>{title === siteConfig.title ? title : `${title} | ${siteConfig.name}`}</title>
 	</head>
 	<body
 		class="bg-[#EDF2E8] text-gray-800 font-sans antialiased min-h-screen flex flex-col"

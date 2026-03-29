@@ -2,6 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import profileImage from "../assets/profile.jpg";
+import { siteConfig } from "../site.config.ts";
+
+const pageTitle = "Alex Billson - Technical Team Lead & Full Stack Developer";
 
 const socialLinks = [
 	{
@@ -19,7 +22,7 @@ const socialLinks = [
 ];
 ---
 
-<Layout title="Alex Billson">
+<Layout title={pageTitle}>
 	<div
 		class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
 	>

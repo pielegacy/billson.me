@@ -1,0 +1,9 @@
+# Allow all web crawlers and AI agents
+User-agent: *
+Allow: /
+
+# Sitemap location for easy discovery
+Sitemap: https://billson.me/sitemap-index.xml
+
+# Crawl delay (optional - helps with server load)
+# Crawl-delay: 10
