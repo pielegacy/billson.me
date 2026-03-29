@@ -1,11 +1,123 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import profileImage from "../assets/profile.jpg";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const socialLinks = [
+	{
+		name: "LinkedIn",
+		url: "https://www.linkedin.com/in/alex-billson-69a0ba13b",
+	},
+	{
+		name: "GitHub",
+		url: "https://github.com/pielegacy",
+	},
+	{
+		name: "Email",
+		url: "mailto:alex_billson@outlook.com",
+	},
+];
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Alex Billson">
+	<div
+		class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
+	>
+		<div class="max-w-5xl w-full">
+			<div
+				class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+			>
+				<!-- Left Column: Content -->
+				<div class="order-2 lg:order-1 space-y-8 animate-fade-in">
+					<div class="space-y-4">
+						<h1
+							class="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 tracking-tight"
+						>
+							Alex Billson
+						</h1>
+						<p
+							class="text-xl sm:text-2xl text-gray-600 font-medium"
+						>
+							Software Developer
+						</p>
+						<p class="text-lg text-gray-500">
+							Melbourne, Australia
+						</p>
+					</div>
+
+					<div class="space-y-4 max-w-lg">
+						<p class="text-lg text-gray-700 leading-relaxed">
+							I'm a Software Developer based in Melbourne,
+							Australia.
+						</p>
+						<p class="text-lg text-gray-700 leading-relaxed">
+							I strive to create scalable, reliable and modern
+							full-stack web applications using a variety of
+							technologies.
+						</p>
+					</div>
+
+					<!-- Social Links -->
+					<div class="flex flex-wrap gap-3 pt-4">
+						{
+							socialLinks.map((link) => (
+								<a
+									href={link.url}
+									target={
+										link.url.startsWith("mailto")
+											? undefined
+											: "_blank"
+									}
+									rel={
+										link.url.startsWith("mailto")
+											? undefined
+											: "noopener noreferrer"
+									}
+									class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-lg transition-all duration-200 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-300"
+								>
+									<span>{link.name}</span>
+								</a>
+							))
+						}
+					</div>
+				</div>
+
+				<!-- Right Column: Profile Image -->
+				<div
+					class="order-1 lg:order-2 flex justify-center lg:justify-end"
+				>
+					<div class="relative">
+						<div
+							class="absolute -inset-1 bg-gradient-to-r from-gray-200 to-gray-300 rounded-2xl blur opacity-50"
+						>
+						</div>
+						<Image
+							src={profileImage}
+							alt="Alex Billson"
+							width={400}
+							height={400}
+							class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-xl"
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </Layout>
+
+<style>
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.animate-fade-in {
+		animation: fadeIn 0.8s ease-out forwards;
+	}
+</style>
