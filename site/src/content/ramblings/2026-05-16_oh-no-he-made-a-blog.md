@@ -1,10 +1,12 @@
 ---
 title: "Oh no he made a blog"
-description: "A draft post for today - ready for content"
+description: "I'm sorry"
 publishedDate: 2026-05-16
 tags:
-  - draft
+  - meta
 draft: true
 ---
 
-This is a draft post for today. Edit this file to add your content.
+Consider this a launch of my ramblings!
+
+Whilst I've historically written on Substack, I've always struggled to maintain consistent momentum on Keeping the Lights On.
