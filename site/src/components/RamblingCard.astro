@@ -17,7 +17,7 @@ const formattedDate = new Date(publishedDate).toLocaleDateString("en-AU", {
 ---
 
 <article
-	class="group bg-white/50 hover:bg-white/70 rounded-lg p-6 transition-all duration-200 ease-in-out hover:scale-[1.02]"
+	class="group bg-white/50 hover:bg-white/70 rounded-lg p-6 transition-colors duration-200 ease-in-out"
 >
 	<a href={`/ramblings/${rambling.id}`} class="block">
 		<div class="space-y-2">
@@ -33,7 +33,7 @@ const formattedDate = new Date(publishedDate).toLocaleDateString("en-AU", {
 				)}
 			</div>
 			<h2
-				class="text-xl font-semibold text-gray-900 group-hover:text-gray-700"
+				class="text-xl font-semibold text-gray-900 group-hover:text-gray-700 underline"
 			>
 				{title}
 			</h2>
