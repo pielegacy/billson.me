@@ -8,7 +8,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   // Site URL for canonical URLs and sitemap
   site: 'https://billson.me',
-  
+
   // Astro integrations
   integrations: [
     // Generate sitemap for SEO and AI agent discovery
@@ -19,7 +19,13 @@ export default defineConfig({
       customPages: [],
     }),
   ],
-  
+
+  markdown: {
+    shikiConfig: {
+      theme: 'everforest-dark'
+    }
+  },
+
   vite: {
     plugins: [tailwindcss()]
   }
