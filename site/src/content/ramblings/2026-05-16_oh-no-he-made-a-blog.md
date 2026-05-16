@@ -4,7 +4,6 @@ description: "I'm sorry"
 publishedDate: 2026-05-16
 tags:
   - meta
-draft: true
 ---
 
 Consider this a launch of my ramblings!
