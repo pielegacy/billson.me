@@ -84,6 +84,31 @@ public/           # Static files served at root
 
 ### Git
 
+#### Branching Strategy
+
+- **Never push directly to `master` or `main`** — always create a feature branch
+- Branch naming convention: `feature/descriptive-name`, `fix/issue-description`, or `update/what-changed`
+  - Good: `feature/add-contact-form`, `fix/navbar-responsive-issue`
+  - Bad: `my-changes`, `fix`, `alex-branch`
+- Create branches from latest `master`:
+  ```bash
+  git checkout master
+  git pull origin master
+  git checkout -b feature/your-feature-name
+  ```
+
+#### Pull Requests (Required)
+
+- All changes must go through a Pull Request — no direct merges
+- PR title should follow commit message style (imperative, present tense)
+- PR description should explain:
+  - What changed and why
+  - Any breaking changes or dependencies
+  - Testing performed (if applicable)
+- Request review before merging (if repository has reviewers configured)
+
+#### Commit Messages
+
 - Commit message style: present tense, imperative mood
   - Good: "Add contact form component"
   - Bad: "Added contact form" or "adds contact form"
