@@ -4,7 +4,6 @@ description: "My weekend with a local AI agent"
 publishedDate: 2026-05-17
 tags:
   - tech
-  - ai
 ---
 
 I tried [Hermes](https://hermes-agent.nousresearch.com/) over the weekend and actually had a good time with it. I'm typically not someone who uses AI in my personal life so when OpenClaw was doing rounds earlier this year it didn't appeal to me much. I've only been vindicated for making the effort to avoid that mess. Peter Steinberger is a talented dude but just says some shit which makes it very hard for me to like him. Loves to chat about how he doesn't read the code he writes and subsequently [has a project with literally hundreds of CVEs.](https://days-since-openclaw-cve.com/) This tangent all to say I can acknowledge OpenClaw has made big moves for helping us figure out what to do with these big capital expenditure guzzlers but it would've been even cooler if it was written with just a little bit more care.
