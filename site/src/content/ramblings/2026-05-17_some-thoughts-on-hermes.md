@@ -1,6 +1,6 @@
 ---
 title: "Some thoughts on Hermes"
-description: "My weekend with a local AI agent"
+description: "The adventures of Peon"
 publishedDate: 2026-05-17
 tags:
   - tech
