@@ -4,7 +4,6 @@ description: "A review of the best models on OpenCode Go and what works for me"
 publishedDate: 2026-05-21
 tags:
   - tech
-  - review
 ---
 
 [OpenCode Go](https://opencode.ai/go) is really solid.
