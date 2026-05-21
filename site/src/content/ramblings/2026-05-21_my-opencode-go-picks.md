@@ -1,6 +1,6 @@
 ---
 title: "My OpenCode Go Picks"
-description: "A review of the best models on OpenCode Go and what works for me"
+description: "Let's enjoy this before the prices go up"
 publishedDate: 2026-05-21
 tags:
   - tech
@@ -20,7 +20,7 @@ I'm going to use this document as a quick reference for anyone getting started w
 
 If I haven't mentioned a model here; I've not bothered with it. Doesn't mean I think it's bad, ultimately would rather build things than run my own crappy model benchmarks.
 
-## Let's enjoy this before the prices go up
+## My Fave - Kimi K2.5
 
 Continues to be my favourite model on the plan. Incredibly cost efficient, while still delivering really solid results. For less complex tasks it can be used effectively for the Plan agent but it thrives in a Build context.
 
