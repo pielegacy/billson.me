@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import rehypeExternalLinks from 'rehype-external-links';
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -23,7 +24,10 @@ export default defineConfig({
   markdown: {
     shikiConfig: {
       theme: 'everforest-dark'
-    }
+    },
+    rehypePlugins: [
+      [rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }]
+    ]
   },
 
   vite: {
