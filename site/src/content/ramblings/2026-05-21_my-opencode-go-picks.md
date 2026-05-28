@@ -1,7 +1,7 @@
 ---
 title: "My OpenCode Go Picks"
 description: "Let's enjoy this before the prices go up"
-publishedDate: 2026-05-21
+publishedDate: 2026-05-28
 tags:
   - tech
 ---
@@ -44,14 +44,18 @@ I'm using more DeepSeek these days and it's pretty good! I really love the patte
 
 I do think there is merit in knowing how to switch between different levels of model depending on the task, anything that helps drill this way of thinking into developers is a good way to stop an over reliance on expensive models you'll never be able to run yourself.
 
-## Qwen 3.5/3.6
-
-I've not done a heap with Qwen but I do acknowledge they are great models.
-
-Will update this if I have more interesting things to say.
-
 ## GLM 5.1
 
 Allegedly a very good model but it's not stuck with me. Looking at benchmarks it sits in the same area as K2.6 and DeepSeek V4 Pro but similar to those models I find it does take its time like no matter how complex the task is.
 
 Still worth changing it up from time to time and giving it a try, I'm not overly passionate about it.
+
+
+## Qwen
+
+They're all bangers. Writing this as 3.7 Max has just released and so far it's a really good balance of being quick but not taking eons to respond.
+
+What's even crazier is how specifically the Qwen line is so often
+the posterchild for local inference. There was [the recent viral post](https://www.reddit.com/r/ClaudeAI/comments/1t8v7z0/hugging_face_cofounder_says_qwen_36_27b_running/) from the Hugging Face co-founder talking about his experience running Qwen whilst on a plane, but seemingly the vibe with Qwen has been it's the one people use locally.
+
+Haven't found any notable shortcomings with using 3.7 for both planning and building but admittedly it's early days.
