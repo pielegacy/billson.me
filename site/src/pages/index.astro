@@ -3,118 +3,165 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import profileImage from "../assets/profile.jpg";
 import { siteConfig } from "../site.config.ts";
+import { getCollection } from "astro:content";
+import RamblingCard from "../components/RamblingCard.astro";
 
 const pageTitle = "Alex Billson - Technical Team Lead & Full Stack Developer";
 
+const ramblings = await getCollection("ramblings", ({ data }) => {
+    return import.meta.env.PROD ? !data.draft : true;
+});
+
+const recentRamblings = ramblings
+    .sort(
+        (a, b) =>
+            b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf(),
+    )
+    .slice(0, 3);
+
 const socialLinks = [
-	{
-		name: "LinkedIn",
-		url: "https://www.linkedin.com/in/alex-billson-69a0ba13b",
-	},
-	{
-		name: "GitHub",
-		url: "https://github.com/pielegacy",
-	},
-	{
-		name: "Email",
-		url: "mailto:alex_billson@outlook.com",
-	},
+    {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/alex-billson-69a0ba13b",
+    },
+    {
+        name: "GitHub",
+        url: "https://github.com/pielegacy",
+    },
+    {
+        name: "Email",
+        url: "mailto:alex_billson@outlook.com",
+    },
 ];
 ---
 
 <Layout title={pageTitle}>
 	<div
-		class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
+		class="py-16 flex items-center justify-center px-4 sm:px-6 lg:px-8"
 	>
-		<div class="max-w-5xl w-full">
-			<div
-				class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
-			>
-				<!-- Left Column: Content -->
-				<div class="order-2 lg:order-1 space-y-8">
-					<div class="space-y-4">
-						<h1
-							class="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 tracking-tight"
-						>
-							Alex Billson
-						</h1>
-						<p
-							class="text-xl sm:text-2xl text-gray-600 font-medium"
-						>
-							Software Engineer, Technical Leader
-						</p>
-						<p class="text-lg text-gray-500">
-							Melbourne, Australia
-						</p>
-					</div>
+        <div class="max-w-5xl w-full">
+            <div
+                class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+            >
+                <!-- Left Column: Content -->
+                <div class="order-2 lg:order-1 space-y-8">
+                    <div class="space-y-4">
+                        <h1
+                            class="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 tracking-tight"
+                        >
+                            Alex Billson
+                        </h1>
+                        <p
+                            class="text-xl sm:text-2xl text-gray-600 font-medium"
+                        >
+                            Software Engineer, Technical Leader
+                        </p>
+                        <p class="text-lg text-gray-500">
+                            Melbourne, Australia
+                        </p>
+                    </div>
 
-					<div class="space-y-4 max-w-lg">
-						<h2 class="text-lg font-semibold text-gray-800">
-							What I'm working on currently:
-						</h2>
-						<ul class="space-y-2 text-lg text-gray-700 list-disc">
-							<li>
-								Leading Technical Teams at <a
-									class="underline"
-									href="https://www.mecca.com/en-au/careers/"
-									>MECCA Brands</a
-								>
-							</li>
-							<li>
-								Writing <a class="underline" href="/ramblings">Ramblings</a> on
-								this site, and (infrequently) for <a
-									class="underline"
-									href="https://billson.substack.com/"
-									>Keeping the Lights On</a
-								>
-							</li>
-							<li>Doing things on the side at Exeter Softworks</li>
-						</ul>
-					</div>
+                    <div class="space-y-4 max-w-lg">
+                        <h2 class="text-lg font-semibold text-gray-800">
+                            What I'm working on currently:
+                        </h2>
+                        <ul class="space-y-2 text-lg text-gray-700 list-disc">
+                            <li>
+                                Leading Technical Teams at <a
+                                    class="underline"
+                                    href="https://www.mecca.com/en-au/careers/"
+                                    >MECCA Brands</a
+                                >
+                            </li>
+                            <li>
+                                Writing <a class="underline" href="/ramblings"
+                                    >Ramblings</a
+                                > on this site, and (infrequently) for <a
+                                    class="underline"
+                                    href="https://billson.substack.com/"
+                                    >Keeping the Lights On</a
+                                >
+                            </li>
+                            <li>
+                                Doing things on the side at Exeter Softworks
+                            </li>
+                        </ul>
+                    </div>
 
-					<!-- Social Links -->
-					<div class="flex flex-wrap gap-3 pt-4">
-						{
-							socialLinks.map((link) => (
-								<a
-									href={link.url}
-									target={
-										link.url.startsWith("mailto")
-											? undefined
-											: "_blank"
-									}
-									rel={
-										link.url.startsWith("mailto")
-											? undefined
-											: "noopener noreferrer"
-									}
-									class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-lg transition-all duration-200 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-300"
-								>
-									<span>{link.name}</span>
-								</a>
-							))
-						}
-					</div>
-				</div>
+                    <!-- Social Links -->
+                    <div class="flex flex-wrap gap-3 pt-4">
+                        {
+                            socialLinks.map((link) => (
+                                <a
+                                    href={link.url}
+                                    target={
+                                        link.url.startsWith("mailto")
+                                            ? undefined
+                                            : "_blank"
+                                    }
+                                    rel={
+                                        link.url.startsWith("mailto")
+                                            ? undefined
+                                            : "noopener noreferrer"
+                                    }
+                                    class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-lg transition-all duration-200 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-300"
+                                >
+                                    <span>{link.name}</span>
+                                </a>
+                            ))
+                        }
+                    </div>
+                </div>
 
-				<div
-					class="order-1 lg:order-2 flex justify-center lg:justify-end"
-				>
-					<div class="relative">
-						<div
-							class="absolute -inset-1 bg-gradient-to-r from-gray-200 to-gray-300 rounded-2xl blur opacity-50"
-						>
-						</div>
-						<Image
-							src={profileImage}
-							alt="Alex Billson Headshot"
-							width={400}
-							height={400}
-							class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover rounded-lg shadow-xl"
-						/>
-					</div>
-				</div>
+                <div
+                    class="order-1 lg:order-2 flex justify-center lg:justify-end"
+                >
+                    <div class="relative">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-gray-200 to-gray-300 rounded-2xl blur opacity-50"
+                        >
+                        </div>
+                        <Image
+                            src={profileImage}
+                            alt="Alex Billson Headshot"
+                            width={400}
+                            height={400}
+                            class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover rounded-lg shadow-xl"
+                        />
+                    </div>
+                </div>
 			</div>
+		</div>
+	</div>
+
+	<div class="pt-16 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-white/30">
+		<div class="max-w-3xl mx-auto">
+			<div class="flex items-center justify-between mb-8">
+					<h2 class="text-2xl font-bold text-gray-900">
+					Recent Ramblings
+				</h2>
+				<a
+					href="/ramblings"
+					class="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700 transition-colors"
+				>
+					<span>View all</span>
+					<span aria-hidden="true">→</span>
+				</a>
+			</div>
+
+			{
+				recentRamblings.length === 0 ? (
+					<p class="text-gray-500 text-center py-12">
+						No ramblings yet. Check back soon!
+					</p>
+				) : (
+					<div class="space-y-4">
+						{recentRamblings.map((rambling) => (
+							<RamblingCard rambling={rambling} />
+						))}
+					</div>
+				)
+			}
 		</div>
 	</div>
 </Layout>
