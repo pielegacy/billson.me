@@ -4,7 +4,6 @@ description: "Personal computing is in a shocking state"
 publishedDate: 2026-05-31
 tags:
   - tech
-draft: true
 ---
 
 As the title says, [the Steam Deck costs too much now.](https://press-start.com.au/news/2026/05/28/steam-deck-oled-price-increase-australia-2026/) 
