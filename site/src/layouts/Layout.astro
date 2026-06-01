@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import SEO from "../components/SEO.astro";
 import { siteConfig } from "../site.config.ts";
+import { THEME_STORAGE_KEY, THEME_ATTRIBUTE } from "../lib/theme";
 
 interface Props {
 	/** Page title */
@@ -55,6 +56,25 @@ const personSchema = {
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 
+		<!-- Theme initialization (runs before paint to prevent FOUC) -->
+		<script is:inline define:vars={{ THEME_STORAGE_KEY, THEME_ATTRIBUTE }}>
+			(function () {
+				try {
+					var stored = localStorage.getItem(THEME_STORAGE_KEY);
+					var prefersDark =
+						window.matchMedia &&
+						window.matchMedia("(prefers-color-scheme: dark)").matches;
+					var theme =
+						stored === "dark" || stored === "light"
+							? stored
+							: prefersDark
+								? "dark"
+								: "light";
+					document.documentElement.setAttribute(THEME_ATTRIBUTE, theme);
+				} catch (e) {}
+			})();
+		</script>
+
 		<!-- RSS Feed -->
 		<link
 			rel="alternate"
@@ -72,14 +92,14 @@ const personSchema = {
 			noindex={noindex}
 			nofollow={nofollow}
 		/>
-		
+
 		<!-- JSON-LD Structured Data for SEO and AI Agents -->
 		<script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
-		
+
 		<title>{title === siteConfig.title ? title : `${title} | ${siteConfig.name}`}</title>
 	</head>
 	<body
-		class="bg-[#EDF2E8] text-gray-800 font-sans antialiased min-h-screen flex flex-col"
+		class="bg-[#EDF2E8] dark:bg-[#101D11] text-gray-800 dark:text-gray-200 font-sans antialiased min-h-screen flex flex-col"
 	>
 		<main class="px-4">
 			<slot />
@@ -90,9 +110,63 @@ const personSchema = {
 					href="https://astro.build"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="underline hover:text-gray-700">Astro</a
+					class="underline hover:text-gray-700 dark:hover:text-gray-300">Astro</a
 				>
 			</samp>
 		</footer>
+
+		<!-- Theme toggle -->
+		<button
+			id="theme-toggle"
+			type="button"
+			aria-label="Toggle dark mode"
+			class="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 shadow-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-500"
+		>
+			<svg
+				class="w-5 h-5 hidden dark:block"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				aria-hidden="true"
+			>
+				<circle cx="12" cy="12" r="4"></circle>
+				<path d="M12 2v2"></path>
+				<path d="M12 20v2"></path>
+				<path d="m4.93 4.93 1.41 1.41"></path>
+				<path d="m17.66 17.66 1.41 1.41"></path>
+				<path d="M2 12h2"></path>
+				<path d="M20 12h2"></path>
+				<path d="m6.34 17.66-1.41 1.41"></path>
+				<path d="m19.07 4.93-1.41 1.41"></path>
+			</svg>
+			<svg
+				class="w-5 h-5 block dark:hidden"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				aria-hidden="true"
+			>
+				<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+			</svg>
+		</button>
+
+		<script>
+			import { toggleTheme } from "../lib/theme";
+
+			const btn = document.getElementById("theme-toggle");
+			if (btn) {
+				btn.addEventListener("click", () => {
+					toggleTheme();
+				});
+			}
+		</script>
 	</body>
 </html>

@@ -23,7 +23,11 @@ export default defineConfig({
 
   markdown: {
     shikiConfig: {
-      theme: 'everforest-dark'
+      themes: {
+        light: 'everforest-light',
+        dark: 'everforest-dark'
+      },
+      defaultColor: false
     },
     rehypePlugins: [
       [rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }]

@@ -63,7 +63,7 @@ const articleSchema = {
 			<div class="mb-8">
 				<a
 					href="/ramblings"
-					class="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700 transition-colors"
+					class="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
 				>
 					<span aria-hidden="true">←</span>
 					<span>All ramblings</span>
@@ -79,7 +79,7 @@ const articleSchema = {
 						{tags && tags.length > 0 && (
 							<>
 								<span>·</span>
-								<span class="text-gray-400">
+								<span class="text-gray-400 dark:text-gray-600">
 									{tags.join(", ")}
 								</span>
 							</>
@@ -87,13 +87,13 @@ const articleSchema = {
 					</div>
 
 					<h1
-						class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-tight"
+						class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-gray-100 tracking-tight leading-tight"
 					>
 						{title}
 					</h1>
 
 					{formattedUpdatedDate && (
-						<p class="text-sm text-gray-400">
+						<p class="text-sm text-gray-400 dark:text-gray-600">
 							Updated on <time datetime={updatedDate?.toISOString()}>
 								{formattedUpdatedDate}
 							</time>
@@ -113,23 +113,23 @@ const articleSchema = {
 					</div>
 				)}
 
-				<div class="prose prose-lg prose-gray max-w-none">
+				<div class="prose prose-lg prose-gray dark:prose-invert max-w-none">
 					<Content />
 				</div>
 			</article>
 
-			<footer class="mt-12 pt-8 border-t border-gray-200">
+			<footer class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
 				<div class="flex items-center justify-between">
 					<a
 						href="/ramblings"
-						class="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700 transition-colors"
+						class="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
 					>
 						<span aria-hidden="true">←</span>
 						<span>All ramblings</span>
 					</a>
 					<div class="flex items-center gap-2">
 						{tags?.map((tag) => (
-							<span class="px-3 py-1 text-sm bg-gray-100 text-gray-600 rounded-full">
+							<span class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-full">
 								{tag}
 							</span>
 						))}
