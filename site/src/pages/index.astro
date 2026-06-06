@@ -47,12 +47,12 @@ const socialLinks = [
                 <div class="order-2 lg:order-1 space-y-8">
                     <div class="space-y-4">
                         <h1
-                            class="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 tracking-tight"
+                            class="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-gray-100 tracking-tight"
                         >
                             Alex Billson
                         </h1>
                         <p
-                            class="text-xl sm:text-2xl text-gray-600 font-medium"
+                            class="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 font-medium"
                         >
                             Software Engineer, Technical Leader
                         </p>
@@ -62,10 +62,10 @@ const socialLinks = [
                     </div>
 
                     <div class="space-y-4 max-w-lg">
-                        <h2 class="text-lg font-semibold text-gray-800">
+                        <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200">
                             What I'm working on currently:
                         </h2>
-                        <ul class="space-y-2 text-lg text-gray-700 list-disc">
+                        <ul class="space-y-2 text-lg text-gray-700 dark:text-gray-300 list-disc">
                             <li>
                                 Leading Technical Teams at <a
                                     class="underline"
@@ -104,7 +104,7 @@ const socialLinks = [
                                             ? undefined
                                             : "noopener noreferrer"
                                     }
-                                    class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-lg transition-all duration-200 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-300"
+                                    class="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium rounded-lg transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
                                 >
                                     <span>{link.name}</span>
                                 </a>
@@ -118,7 +118,7 @@ const socialLinks = [
                 >
                     <div class="relative">
                         <div
-                            class="absolute -inset-1 bg-gradient-to-r from-gray-200 to-gray-300 rounded-2xl blur opacity-50"
+                            class="absolute -inset-1 bg-gradient-to-r from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-600 rounded-2xl blur opacity-50"
                         >
                         </div>
                         <Image
@@ -134,15 +134,15 @@ const socialLinks = [
 		</div>
 	</div>
 
-	<div class="pt-16 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-white/30">
+	<div class="pt-16 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-white/30 dark:to-black/20">
 		<div class="max-w-3xl mx-auto">
 			<div class="flex items-center justify-between mb-8">
-					<h2 class="text-2xl font-bold text-gray-900">
+					<h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100">
 					Recent Ramblings
 				</h2>
 				<a
 					href="/ramblings"
-					class="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700 transition-colors"
+					class="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
 				>
 					<span>View all</span>
 					<span aria-hidden="true">→</span>
