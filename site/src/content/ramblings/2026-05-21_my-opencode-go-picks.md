@@ -1,12 +1,12 @@
 ---
 title: "My OpenCode Go Picks"
-description: "A semi-frequently updated post of my fave open weight models for coding"
+description: "Included GLM 5.2 and Kimi Code 2.7 initial thoughts"
 publishedDate: 2026-06-21
 tags:
   - tech
 ---
 
-_Last Updated 2026-06-06 - Added some MiniMax Glazing, friendship ended with Kimi, also trying out MiMo 2.5_
+_Last Updated 2026-06-21 - Included GLM 5.2 and Kimi Code 2.7 initial thoughts_
 
 [OpenCode Go](https://opencode.ai/go) is really solid.
 
