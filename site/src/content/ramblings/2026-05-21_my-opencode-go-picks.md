@@ -1,7 +1,7 @@
 ---
 title: "My OpenCode Go Picks"
 description: "A semi-frequently updated post of my fave open weight models for coding"
-publishedDate: 2026-06-06
+publishedDate: 2026-06-21
 tags:
   - tech
 ---
@@ -24,9 +24,17 @@ If I haven't mentioned a model here; I've not bothered with it. Doesn't mean I t
 
 ---
 
-## MiniMax M3 (🐐)
+## GLM 5.2
 
-My current fave for how I use Agentic Coding harnesses. Not the smartest but smart enough to execute a build plan. Reasonable pricing, doesn't get caught in thinking loops often (at least from my experience).
+I get the hype. It is more expensive compared to other models but for what you get it is absolutely worth it.
+
+## Kimi Code 2.7
+
+Very happy with the direction MoonShot took with this model - currently a model I keep going back to.
+
+## MiniMax M3
+
+Not the smartest but smart enough to execute a build plan. Reasonable pricing, doesn't get caught in thinking loops often (at least from my experience).
 
 Fits the same mould that Kimi K2.5 did but as is often the case with these coding models there is an edge to them being newer.
 
