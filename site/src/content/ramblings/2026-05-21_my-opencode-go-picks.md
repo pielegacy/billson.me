@@ -1,6 +1,6 @@
 ---
 title: "My OpenCode Go Picks"
-description: "Included GLM 5.2 and Kimi Code 2.7 initial thoughts"
+description: "A semi-frequently updated post of my fave open weight models for coding"
 publishedDate: 2026-06-21
 tags:
   - tech
