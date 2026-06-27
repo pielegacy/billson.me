@@ -1,7 +1,7 @@
 ---
 title: "My OpenCode Go Picks"
 description: "A semi-frequently updated post of my fave open weight models for coding"
-publishedDate: 2026-06-21
+publishedDate: 2026-06-27
 tags:
   - tech
 ---
@@ -26,11 +26,23 @@ If I haven't mentioned a model here; I've not bothered with it. Doesn't mean I t
 
 ## GLM 5.2
 
-I get the hype. It is more expensive compared to other models but for what you get it is absolutely worth it.
+I do see the hype, I wonder if my current experience with it is potentially impacted by however z.ai is providing inference to OpenCode Go/Zen.
+It's a hefty model, the results it produces definitely are on rivalling what I've seen from Opus (I didn't get a chance to try out Fable and for the cost I refuse to believe any work
+I'm doing with LLMs is worth it).
+
+The quality of the code produced is strong, I've loved using it for plan mode activities, it is like GLM 5.1 though where I wouldn't recommend using this for small edits and refactors
+if you are like me and hate waiting for these things.
+
+It's definitely worth trying, I've found similarly to 5.1 the rate limiting means it's best used for complex plans or even with something like Hermes/OpenClaw where you can fire off
+some prompts and let it run in the background.
 
 ## Kimi Code 2.7
 
-Very happy with the direction MoonShot took with this model - currently a model I keep going back to.
+Kimi is so back. After Kimi K2.6 left me a little disappointed compared 2.5 with regards to the overthinking that I experienced the newer version, I'm loving Code 2.7.
+
+The combo of GLM 5.2 for planning into Kimi Code 2.7 for the build has felt great.
+
+Could be my new top pick for coding it's just a perfect balance of smarts and speed.
 
 ## MiniMax M3
 
