@@ -123,6 +123,6 @@ No test framework currently configured. When adding tests:
 
 ## Environment
 
-- Node.js >=22.12.0 required
+- Node.js >=22.23.4 required
 - Package manager: npm
 - No linting/formatting tools currently configured
