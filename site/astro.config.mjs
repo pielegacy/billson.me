@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import { unified } from '@astrojs/markdown-remark';
 import sitemap from '@astrojs/sitemap';
 import rehypeExternalLinks from 'rehype-external-links';
 
@@ -22,16 +23,20 @@ export default defineConfig({
   ],
 
   markdown: {
+    // Keep the unified pipeline so the rehype plugin below keeps working
+    // with Astro v7's new Sätteri default processor.
+    processor: unified({
+      rehypePlugins: [
+        [rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }]
+      ]
+    }),
     shikiConfig: {
       themes: {
         light: 'everforest-light',
         dark: 'everforest-dark'
       },
       defaultColor: false
-    },
-    rehypePlugins: [
-      [rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }]
-    ]
+    }
   },
 
   vite: {
