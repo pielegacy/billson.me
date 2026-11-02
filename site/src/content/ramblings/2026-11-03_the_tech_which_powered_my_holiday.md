@@ -1,0 +1,38 @@
+---
+title: "The tech that powered my 2026 holiday"
+description: "Only one AI tool I promise"
+publishedDate: 2026-11-03
+tags:
+  - tech
+  - life
+draft: true
+---
+
+## Software: Translator by David Ventura
+
+Between my last trip to a Non-English-Speaking country and this one it appears that Microsoft Translator has become absolutely garbage.
+The app has undergone a redesign and as is par for the course for Microsoft apps it has lost core functionality in the process and has become worse to use. Offline translation "packs" are no longer a thing which was the main reason I used the app to begin with. Google Translate offers offline translation but I wanted to see what else was available for more of a snappy "offline first" translation app. 
+
+I stumbled across [`offline-translator`](https://github.com/DavidVentura/offline-translator)  as I looked through what was available on F-Droid. ![[Screenshot_20260914_081321_Translator.jpg]]
+I adore this app. It is incredibly quick to open, the translations are as good as anything I got with Microsoft Translator, and as a software engineer I appreciate the approach they've taken to build this. The app relies on Firefox's offline translation models which are also open source, when you boot the app up you download the languages you need and some core components and that's it. 
+My internet throughout my travels in Greece was very flakey but despite this setting up this app was something that was easily done in mobile data. Once the setup is done you get text, audio, and image based translation all offline and on-device. The author of the app has done an [excellent job documenting](https://blog.davidv.dev/posts/mobile-translator/) the process of building the app; this is a prime example of open source working well and the results you can get when talented people have access to powerful technologies.
+
+I find that having this tech so easily available has been a catalyst for me improving my Greek. I dropped Duolingo over a year ago as I found I wasn't learning enough for the annoyances that came with the app and their big [AI lay-offs memo](https://www.linkedin.com/posts/duolingo_below-is-an-all-hands-email-from-our-activity-7322560534824865792-l9vh?utm_source=share&utm_medium=member_android&rcm=ACoAACICMlYBwbktMtf2LRJ62Y9C0vrE9tfRpfY) portrayed a company I didn't want to continue giving money to (it appears they eventually [walked this back](https://www.metaintro.com/blog/duolingo-ceo-walks-back-ai-first-memo-hiring-grows-2026) but to no one's surprise it's a pretty average way to learn a language). My Greek is good enough that I can kind of eyeball the results from a translator app and divert to other sources if I need a more thorough result/explanation. Reviewing the output of non-deterministic software on deterministic machines is the M.O of 2026 white collar work, might as well introduce it as a habit into my personal ambitions of learning a new language. These translator apps in general are limited by the fact that many other languages just flat out don't flow like English. Παρακαλώ (parakalao) in Greek can be used to:
+1. Say "please"
+2. Say "you're welcome"
+3. Informally answer a phone call
+There are many things like this which a translator app doesn't have the context to deduce - this is actually a boon to something like this offline translator app as I'm going into this app knowing it's best used for small requests. Supplemented with other learning materials however (I've been loving [LanguageTransfer](https://www.languagetransfer.org/) as a replacement for what Duolingo used to give me), an app like this offline translator has been vital for this trip and I will continue to use it as a learning aid Post-Europe holiday.
+
+## Software: Kagi Search & Assistant
+
+Kagi is a product which continues to meaningfully improve especially with how they integrate AI into their product. With regards to search, whilst we are still at the behest of Google and Google Maps for reviews and up to date business information I found that Kagi was a sure-fire way to get better recommendations that were a little bit off the beaten path. 
+
+The search engine's effort to call out "Listicles" as separate results from blogs and more thoroughly written pieces is excellent for sifting through travel content which often can be low effort and generic (I'm so sick of "Ten Things to do in PLACEHOLDER" articles where one of the items is "Explore the Old Town" and another is "Try the local cuisine" like no shit I will walk and eat during my holiday thanks for that insight). 
+It's not always better than Google for especially recent results; as someone who has always tried to not use Google for all things search having to wield engines akimbo is something I'm familiar with. Nevertheless I find myself not reaching for Google anywhere near as much as I used to and Kagi does feel like the best option compared to alternatives like DuckDuckGo and Ecosia.
+
+Their AI offerings are also maturing very nicely as well. The stand out feature for Kagi is how appending a question mark to the end of a search will give you the AI summary similar to what is in Google. These summaries have gotten really good! They're not intrusive and opt-in, include meaningful references to dig deeper and like Google's implementation the search can be handed over to a full AI chat experience (Kagi Assistant) for further research.
+Kagi Assistant is quite nice to use as well - defaulting to an optimised "Quick" Model for summaries and Q&A (Seemingly GLM 5.2 at the time of writing this although Kagi seem to rotate the model as more cost effective options arise). Plenty of other models are offered as well, both open and closed weight. 
+
+Kagi Assistant seems to be taking a very privacy oriented approach to its design. By default your threads will vanish within 24 hours unless you hit the hourglass button in the top right of your chats. There is no concept of "Memory" so it doesn't remember prior conversations you've had. I find this refreshing, but also understand that a lot of these limitations could be privacy related or are more likely just a backlog item that needs better prioritisation. Some actually useful things are missing for example; I don't see any way to configure Skills for Kagi Assistant which is a big no no in 2026. The way Kagi had also been managing the product seems shaky at times - my Kagi Professional Subscription includes credits on the same cadence as my billing cycle. This means my credits which I get as part of this subscription (which I originally bought purely for search) will only get reset in 2027 if I pay for another year of Kagi. It's funny as this approach feels like a deterrent for paying yearly which typically feels backwards to how a business wants to reward customers for paying upfront. Who knows what the offering will look like in 2027? My hope is with a reliance on open weight models and seemingly transparent pricing they're not burning cash to make this work but that could be just blind optimism for a product I actually quite like.
+
+All that aside I really like Kagi and there were several times on this trip that which it helped me massively and provided a better experience compared to what I'd have to go through with Google. No ads and a search engine that seemingly is trying very hard to actually give you the results you're looking for is something I am willing to pay for, the AI features are an added bonus which are getting more appealing with time as the product evolves.
