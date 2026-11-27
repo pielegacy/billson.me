@@ -1,0 +1,43 @@
+---
+title: Create a culture of giving a shit
+description: Staying optimistic during a flop era for corporate software engineering
+publishedDate: 2026-11-28
+---
+
+Reflecting on the year that's gone by, I am proud that I am still able to surround myself with people who care about the work they do. 
+
+2026 has shaped up to be a year where some of the hype with coding agents and the potential impact they could have on Software Engineering as a discipline has come to fruition. 
+I don't want to dedicate too much time to this as I have nothing new to say with regards to how people are using coding agents. To set the scene on where I come from with this paradigm: 
+1. I write a lot less code by hand these days but have not tossed out the IDE or the Text Editor
+2. I'm still very much encouraging manual code review with the use of agents to help cutdown review time. Also exploring what options there are in my enterprise environment but the few I've seen integrated so far are just *fine*
+3. At this current point in time I believe anything more than a decently established coding agent, a few skills and a couple of connectors is all you really need to get value out of agents. Save the self-masturbatory effort of rolling your own _"custom harness"_ or building that lights off software factory as the time spent doing that could instead be spent delivering something valuable to the world
+4. I don't believe the overwhelming number of negatives that have come from the unsustainable development of Large Language Models are outweighed by the benefits
+
+So the tooling has gotten better and the workflows more robust; why are the vibes in software engineering so shocking right now? Most surveys consistently paint the picture that developers overwhelmingly use AI to code but also job satisfaction is in the pits. The glaring reason for a lack of satisfaction in white collar work in general is the waves of layoffs, redundancies, and offshoring impact the knowledge work (hate that phrase) at large. You *could* pin this on AI; the details are hazy and I think in many cases this implication that this level of job displacement is caused by Claude subscriptions is a convenient way to mask unbound greed and poor management of companies during economically tumultuous times. 
+
+For this rant, let's focus on why people with decent job security are not happy as I feel that's more nuanced. For software developers it's a fantastic time to be a "builder" as opposed to someone who is obsessed with the craft. Someone who doesn't necessarily go down to the nitty gritty technical details of the code, and instead is more driven by making things that people want to use are having a **much** better time than those who enjoy the process of writing the code in a way where each individual line was considered. 
+This leads to my first take around navigating the future of software engineering; a majority of you who are paid to write code have always been builders and your dedication to the craft has probably always been conflated.
+
+As someone who has always considered themself _"Full Stack"_ one of the beneficial parts of this moniker is by not boxing myself in I've been able to get the best of both worlds. Prior to the word-salad robot's creation; I loved the idea that I could write a backend and a user interface that I understood most of the intricacies of. You might say _"well in that case aren't you the craftsmen who has been displaced by these machines?"_ - I would argue that being able to deliver something end-to-end and understand it is the most builded oriented mindset of all. Siloing to specific domains is a necessary evil to maintain sanity (I don't believe there is anything inherently wrong with tapping out at some point of understanding - I know a tonne about the code that sends orders to our warehouse management system at work but couldn't tell you how it works once it reaches past that submission). However the breakdown of silos from a backend and frontend perspective was an industry trend prior to LLMs and LLMs have continued to solidify that trend.
+
+Where this falls apart, the inspiration for me writing this, is whilst we _can_ work faster a vast majority of workplaces have not grown their ambitions to meet this. Too many companies are creating environments that 
+encourage speed in delivery no matter what corners need to be cut, not enough are rewarding those who work pragmatically and want to care about what they are delivering. 
+
+AI in Software Engineering is a multiplier; multiplying a negative creates an even bigger negative. The smartest person you work with has become a one-person team thanks to their Claude Code subscription. The [flunkies, goons, box tickers and task masters](https://a4kids.org/wp-content/uploads/2021/05/100.-5-Types-of-Bullshit-Job-Graeber.pdf) have become absolute menaces to any form of actual productivity.
+
+Engineers are being handed these tools with the social contract that things need to be delivered faster, which is a reasonable expectation especially when the cost of AI for the forseeable future is only set to go up, but so much of this negative feeling is because the contract is incredibly one-sided. If these new found capabilities were used scale out new services that provide a deeper competitive moat, improve existing services with large refactors delivered with high confidence, or drive experimentation for the next big thing; I think we'd not be seeing the disdain in the industry we currently do.
+
+However despite the pressure placed on the _doers_, this same pressure is not on the _thinkers_. So many people I speak to spend their days coordinating agents that build mindless work with no ambition and any attempt to go a little deeper and build something more holistically gets in the way of moving faster. [The tools which allegedly have the capability to cure the incurable](https://diseasescuredbyai.com/) are being deployed to do integrate into that one Third Party Service with the flakey API and the support team which you hate speaking to. 
+Most software still sucks to use, despite SaaS apparently dying there's still a myriad of services your work probably pays way too much for which could be brought in-house. 
+
+I don't say this be doom and gloom, as all of these problems are fixable.
+
+If you are one of the Engineers who is feeling this way;
+
+1. Care about the tech you choose and the decisions you make - whether that be a broader architectural level, with the dependencies you bring in, or how your code is designed. Whilst coding is done more and more by the computer itself you **do not** want to be that person who is typing manically into a chat window when you've got a P1 in production and no idea how the system works that broke it.
+2. Continue learning, grow your skillset, think at a higher level. Learn about the architectural patterns that back the applications you work on. Lean in more to areas you previously didn't work on. When being more "full stack" - make an effort to understand the codebase you're working with so people _want_ to review your submissions and you're someone who's causing more harm than good.
+3. Own more of the stack - if job stability is your concern. Make the next thing at work _your thing_. This is not some sort of boot licker take to do more work for the same salary but I know personally I've never felt worse about learning more and there is a skill in picking up more responsibility but maintaining a similar workload.
+
+So much of what I've written today seemingly comes from top-down decisions, so if you are someone who in some way has influence over engineering at your business; ensure that you hold yourself to the same standards as those who deliver the code the business relies on. Consult the smart people in your engineering space, provide room for experimentation, and don't conflate speed to market with value. Engineering is no longer (and my view has never _really_ been) the bottleneck. Ensure your direction is solid and consistent with enough room for the people deploying it to do it right. Don't have talented developers churn out mindless API endpoints whilst praising non-technical backgrounded people for _"vibe coding"_ the next big internal tool (which often times will require a developer to maintain and deploy). 
+
+What it means to write software may have changed dramatically the past few years, but my call to action is that we don't forget that some fundamentals do not change and you will never regret making time to build a solid direction and creating a space where people can do their best work.
