@@ -2,6 +2,9 @@
 title: Create a culture of giving a shit
 description: Staying optimistic during a flop era for corporate software engineering
 publishedDate: 2026-11-28
+tags:
+  - tech
+  - leadership
 ---
 
 Reflecting on the year that's gone by, I am proud that I am still able to surround myself with people who care about the work they do. 
